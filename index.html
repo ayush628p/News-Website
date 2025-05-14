@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" onclick="reload()" class="comapany-logo">
+            <img
+            src="./assets/istockphoto-1181901573-612x612.jpg"
+            alt="news_app_logo"
+        /></a>
+
+        <div class="nav-links">
+          <ul class="flex">
+            <li class="nav-items hover-links" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+            <li class="nav-items hover-links" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+            <li class="nav-items hover-links" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input type="text" class="news-input" id="news-input" placeholder="e.g. Science" />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+        <div class="card-container container flex" id="card-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the title</h3>
+                <h6 id="news-source" class="news-source">End Gadget 30/07/2023</h6>
+                <p class="news-desc" id="news-desc">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia necessitatibus voluptatibus quis eius reprehenderit dolores recusandae quo! Inventore, quae vitae.
+                </p>
+            </div>
+        </div>
+    </template>
+
+    <script src="./action.js"></script>
+  </body>
+</html>
